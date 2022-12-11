@@ -1,3 +1,22 @@
+if getgenv().Headless == true then
+while true do
+game.Players.LocalPlayer.Character.Head.Transparency = 1
+game.Players.LocalPlayer.Character.Head.Transparency = 1
+for i,v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
+if (v:IsA("Decal")) then
+v.Transparency = 1
+end
+end
+
+for i,v in next, game:GetService('Players').LocalPlayer.Character:GetChildren() do
+   if v:IsA('Accessory') then
+       v:Destroy()
+   end
+end
+wait(1)
+end
+end
+
 if getgenv().UAA == true then
     getgenv().Underground = true 
 getgenv().UndergroundAmount = 825
